@@ -1,0 +1,17 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: Eureka-Payment-02
+
+
+eureka:
+  instance:
+    hostname: eureka7002.com  # eureka服务端
+
+  client:
+    register-with-eureka: false # eureka服务端不用注册自己
+    fetch-registry: false #表示自己就是注册中心
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/   #集群下,以另一台作为注册中心
